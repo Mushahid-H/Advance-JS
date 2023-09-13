@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script>
+      //   let nums = [10, 20, 30]
+      //   let iterator = nums[Symbol.iterator]()
+
+      //   iterator.next() // don't want to print
+      //   console.log(iterator.next().value)
+      //   console.log(iterator.next().done)
+
+      // ************* loop through iterator *************
+
+      //   let numbers = [10, 20, 30, 40, 50]
+      //   let iterator = numbers[Symbol.iterator]()
+      //   let next = iterator.next()
+
+      //   while (!next.done) {
+      //     console.log(next.value)
+      //     next = iterator.next()
+      //   }
+
+      // ************* own iterator ftn *************
+
+      function iteratorFtn(arr) {
+        var nextNmbr = 0
+        return {
+          next() {
+            if (nextNmbr < arr.length) {
+              return {
+                value: arr[nextNmbr++],
+                done: false,
+              }
+            } else {
+              return { done: true }
+            }
+          },
+        }
+      }
+      let nos = [1, 23, 3, 45, 56]
+
+      let iterator = nos[Symbol.iterator]()
+      console.log(iterator.next().value)
+      console.log(iterator.next().value)
+      console.log(iterator.next().value)
+      console.log(iterator.next())
+      console.log(iterator.next().value)
+      console.log(iterator.next())
+    </script>
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>

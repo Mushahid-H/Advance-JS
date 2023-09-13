@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      //   let x = Symbol('Hello')
+      //   console.log(x)
+      //   console.log(typeof x)
+      //   console.log(x.toString())
+      //   console.log(x.description)
+
+      //   let x = Symbol('Hello')
+      //   let y = Symbol('Hello')
+
+      //   if (x == y) {
+      //     console.log('True')
+      //   } else {
+      //     console.log('False')
+      //   }
+
+      //   let a = 'mushahid'
+      //   let b = 'mushahid'
+
+      //   if (a == b) {
+      //     console.log('true')
+      //   } else {
+      //     console.log('false')
+      //   }
+
+      //*************** Wrong way ******************
+      //   let age = Symbol('age')
+      //   let users = {
+      //     name: 'Musahhid',
+      //     [age]: 20,
+      //     city: 'Karachi',
+      //   console.log(users.age)
+      //   }
+
+      //*************** Right way *****************
+      //   let age = Symbol('age')
+      //   let users = {
+      //     name: 'Musahhid',
+      //     [age]: 20,
+      //     city: 'Karachi',
+      //   }
+      //   can also insert symbol into object lke user[age]
+      //   console.log(users[age])
+
+      //   *********** Error ***********
+      //   let x = Symbol('Hello')
+      //   alert(x)
+
+      //   *********** No Error ***********
+      //   let x = Symbol('Hello')
+      //   alert(x.toString()) will output Symbol(Hello)
+      //   alert(x.description)
+
+      //   ************* symbol inside object in for loop get skipped *************
+      //   let age = Symbol('age')
+      //   let users = {
+      //     name: 'Musahhid',
+      //     [age]: 20,
+      //     city: 'Karachi',
+      //   }
+      //   for (let i in users) {
+      //     console.log(i)
+      //   }
+      //   ************** when converting object into json, symbol get skipped **************
+      //   let age = Symbol('age')
+      //   let users = {
+      //     name: 'Musahhid',
+      //     [age]: 20,
+      //     city: 'Karachi',
+      //   }
+      //   console.log(users)
+      //   console.log(JSON.stringify(users))
+    </script>
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <script>
+      //   function prom(message) {
+      //     return new Promise((resolve, reject) => {
+      //       console.log('loading')
+      //       setTimeout(() => {
+      //         fetch('https://jsonplaceholder.typicode.com/posts').then((res) =>
+      //           resolve(res.json())
+      //         )
+      //       }, 2000)
+      //     })
+      //   }
+
+      //   let success = (message) => {
+      //     console.log(message)
+      //   }
+      //   let rejected = (message) => {
+      //     console.log(message)
+      //   }
+
+      //   prom(true).then(success).catch(rejected)
+
+      let promise = new Promise((resolve, reject) => {
+        setTimeout(() => {
+          if (false) {
+            resolve('success')
+          } else {
+            reject('failed')
+          }
+        }, 2000)
+      })
+
+      promise
+        .then((message) => {
+          console.log(message)
+        })
+        .catch((message) => {
+          console.log(message)
+        })
+    </script>
+  </head>
+  <body></body>
+</html>
